@@ -6,21 +6,13 @@ class Project_model extends CI_Model {
 
 	public function get_project($id) {
 
-
 		 $this->db->where('id', $id);
 
 		$query = $this->db->get('projects');
 
-
-	
-
 		return $query->row();
 
-
 	}
-
-
-
 
 	public function get_projects() {
 
@@ -28,14 +20,9 @@ class Project_model extends CI_Model {
 
 		return $query->result();
 
-
-
-
 	}
 
-
 	public function get_all_projects($user_id) {
-
 
 		$this->db->where('project_user_id', $user_id);
 
@@ -45,42 +32,31 @@ class Project_model extends CI_Model {
 
 	}
 
-
-
-
-
-
 	public function create_project($data) {
 
 		$insert_query = $this->db->insert('projects', $data);
 
 		return $insert_query;
 
-
 	}
-
 
 	public function edit_project($project_id, $data) {
 
 		$this->db->where('id', $project_id);
+
 		$this->db->update('projects', $data);
 
 		return true;
 
 	}
 
-
 	public function delete_project($project_id) {
 
 		$this->db->where('id', $project_id);
+
 		$this->db->delete('projects');
 
-
-
-
 	}
-
-
 
 	public function get_projects_info($project_id) {
 
@@ -95,7 +71,6 @@ class Project_model extends CI_Model {
 
 
 	public function get_project_tasks($project_id, $active = true) {
-
 
 		$this->db->select('
 
@@ -130,22 +105,9 @@ class Project_model extends CI_Model {
 
 		} 
 
-
 		return $query->result();
 
-
-
-
-
-
-
-
-
-
-
 	}
-
-
 
 	public function delete_project_tasks($project_id) {
 
@@ -155,24 +117,8 @@ class Project_model extends CI_Model {
 
 		return $query;
 
-
 	}
 
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
 
  ?>

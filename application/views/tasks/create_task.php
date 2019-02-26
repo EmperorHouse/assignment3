@@ -22,8 +22,8 @@ $data = array(
 
 <div class="form-group">	
 <?php echo form_label('task Description'); ?>
-<?php
 
+<?php
 $data = array(
 	'class' => 'form-control',
 	'name' => 'task_body'
@@ -44,7 +44,6 @@ $data = array(
  ?>
 
 <?php echo form_input($data); ?>
-
 </div>
 
 <div class="form-group">

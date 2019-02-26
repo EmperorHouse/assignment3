@@ -19,10 +19,11 @@
 </div>
 
 <div class="col-xs-3 pull-right">
-<ul class="list-group">		
-    <h4>Task Actions</h4>
-		<li class="list-group-item"><a href="<?php echo base_url(); ?>tasks/delete/<?php echo $task->project_id; ?>/<?php echo $task->id; ?>">Delete</a></li> 
-		<li class="list-group-item"><a href="<?php echo base_url();?>tasks/mark_complete/<?php echo $task->id; ?>">Mark Complete</a></li> 
-		<li class="list-group-item"><a href="<?php echo base_url();?>tasks/mark_incomplete/<?php echo $task->id; ?>">Mark Incomplete</a></li> 
+	<ul class="list-group">		
+		<h4>Task Actions</h4>
+		<li class="list-group-item"><a href="<?php echo base_url(); ?>tasks/edit/<?php /*echo $task->project_id; ?>/<?php*/ echo $task->id; ?>">Edit</a></li> 
+		<li class="list-group-item"><a href="<?php echo base_url(); ?>tasks/delete/<?php /*echo $task->project_id; ?>/<?php*/ echo $task->id; ?>">Delete</a></li> 
+		<li class="list-group-item"><a href="<?php echo base_url(); ?>tasks/mark_complete/<?php echo $task->id; ?>">Mark Complete</a></li> 
+		<li class="list-group-item"><a href="<?php echo base_url(); ?>tasks/mark_incomplete/<?php echo $task->id; ?>">Mark Incomplete</a></li> 
 	</ul>
 </div>
